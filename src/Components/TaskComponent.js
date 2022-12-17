@@ -1,11 +1,6 @@
-// import logo from "./logo.svg";
-// import "./App.css";
+import React from "react";
 
-import Heading from "./Components/Heading";
-import InputComponent from "./Components/InputComponent";
-import TaskComponent from "./Components/TaskComponent";
-
-function App() {
+const TaskComponent = () => {
   const task = [
     {
       id: 1,
@@ -28,12 +23,16 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <Heading />
-      <InputComponent />
-      <TaskComponent />
+    <div>
+      {task.map((task) => (
+        <div>
+          {task.taskName}
+          <button>{task.deleteButton}</button>
+          <button>{task.editButton}</button>
+        </div>
+      ))}
     </div>
   );
-}
+};
 
-export default App;
+export default TaskComponent;
