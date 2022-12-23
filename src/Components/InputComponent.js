@@ -13,7 +13,7 @@ const InputComponent = () => {
           placeholder="Add new task"
           value=""
         ></input>
-        <button onClick={AddButton}>Add ToDo </button>
+        <button onClick={AddButton}>Add Todo </button>
       </div>
     </div>
   );
