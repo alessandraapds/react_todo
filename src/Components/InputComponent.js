@@ -1,19 +1,27 @@
-import React from "react";
-import AddButton from "./AddButton";
+import React, { useState } from "react";
 
 const InputComponent = () => {
+  // State hook function//
+  const [newItem, setNewItem] = useState([]);
+
+  function addItem() {
+    console.log(newItem);
+  }
+
   return (
     <div>
-      <div class="task-input">
+      <div className="task-input">
         <i className="uil-align-left"></i>
         <input
-          className="input-task-input"
-          id="input-task-input"
-          type="text"
+          className="text"
+          id=""
+          type=""
           placeholder="Add new task"
-          value=""
+          value={newItem}
+          onChange={(e) => setNewItem(e.target.value)}
         ></input>
-        <button onClick={AddButton}>Add Todo </button>
+        <button onClick={() => addItem()}>Add</button>
+        
       </div>
     </div>
   );
