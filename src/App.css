@@ -1,17 +1,41 @@
 .App {
   text-align: center;
-  background-color: blue;
-  background-image: linear-gradient(lightblue, blue);
-  padding-bottom: 820px;
-  display: flexbox;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(68, 107, 165));
+  height: 700px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: auto;
+  width:500px;
+  border-radius: 10px;
 }
 
+.header {
+background-color: rgb(20, 14, 95);
+height:120px;
+color:whitesmoke;
+border-radius: 10px;
+
+}
+.todo-items {
+ font-weight: 500;
+  font-size: 24px;
+  padding: 20px;
+  border: 1px solid, black;
+}
 input {
   padding: 10px;
+  margin: 8px;
   border-radius: 5px;
+  font-weight: bold;
 }
 button {
   padding: 10px;
+  margin: 2px;
   border-radius: 5px;
- 
+  background-color: rgb(20, 14, 95);
+ font-weight: bold;
+ color: white;
+}
+label {
+  font-weight:600;
+  font-size: 18px;
 }

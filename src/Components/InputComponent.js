@@ -54,11 +54,11 @@ function handleEditFormSubmit (e) {
 }
 
   return (
-    <div>
+    <div className="input-component">
         {isEditing ? (
           <form onSubmit={handleEditFormSubmit}>
             <h2>Edit ToDo</h2>
-            <label htmlFor="editTodo">Edit Todo:</label>
+            <label htmlFor="editTodo">Edit To Do:</label>
            <input
               name="editTodo"
               type="text"
@@ -67,13 +67,12 @@ function handleEditFormSubmit (e) {
               onChange={handleEditInputChange}
           />
            <button type="submit">Update</button>
-         
-          <button onClick={() => setIsEditing(false)}>Cancel</button>
+           <button onClick={() => setIsEditing(false)}>Cancel</button>
         </form>
         ) : (
           <form onSubmit={addItem}>
-          <h2>Add Todo</h2>
-          <label htmlFor="todo">Add todo: </label>
+          <h2>Add To Do:</h2>
+          <label htmlFor="todo">Enter a task: </label>
          
           <input
             name="todo"
@@ -85,20 +84,8 @@ function handleEditFormSubmit (e) {
           <button onClick={() => addItem()}>Add</button>
         </form>
       )}
-      
-      {/* <div className="task-input">
-        <i className="uil-align-left"></i>
-        <input
-          className="text"
-          id=""
-          type=""
-          placeholder="Add new task"
-          value={newItem}
-          onChange={(e) => setNewItem(e.target.value)}
-        ></input>
-        <button onClick={() => addItem()}>Add</button>
-      </div> */}
-      <div>
+
+      <div className="todo-items">
         {items.map((item) => (
           <div key={item.id}>
             {item.value}
